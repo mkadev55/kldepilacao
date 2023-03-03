@@ -1,0 +1,1395 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    background-color: none;
+    color: #00A190;
+}
+/*PÁGINA INICIAL*/
+#home {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-image: url(img/vitrine-2-1c520531.png);
+    background-position: center 0;
+    background-size: cover;
+  }
+.grow h1 {
+    color: black;
+    font-size: 45px;
+    text-decoration-line: inherit;
+    text-decoration-color: #808080;
+}
+.grow, h3 {
+    color: black;
+    font-weight: 300;
+    font-size: large;
+    background: none;
+}
+.grow h1{
+    transition: 1s ease;
+    }
+    
+.grow h1:hover{
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+    transition: 1s ease;
+    }
+
+/*HEADER*/
+header{
+    background-color: #00A190;
+}
+.logofixa h1 {
+    font-size: x-large;
+    font-weight: 600;
+    margin-left: 10px;
+    display: flex;
+    align-items:first baseline;
+    justify-content: center;
+    color: black;
+    background-color: #00A190;
+    padding: 10px;
+}
+.logofixa span {
+    font-size: medium;
+    color: black;
+    font-weight: 300;
+    background-color: #00A190;
+    margin-left: 4px;
+}
+
+/*MENU NAVEGAÇÃO*/
+.links {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    position: absolute;
+    z-index: 10;
+  }
+  
+.links label {
+    padding: 10px 0;
+    flex-grow: 1;
+    cursor: pointer;
+    transition: all .4s;
+    text-align: center;
+    font-size: 100%;
+    color: white;
+    background-color: #008A5B;
+  }
+  
+.links label:hover {
+    background-color: rgba(217, 213, 217, 0.5);
+    color: #00A190;
+    font-weight: bold;
+  }
+.scroll {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+.sections {
+    transition: all .4s;
+  }
+  
+.input-menu {
+    display: none;
+  }
+  
+#rd_servicos {
+    display: none;
+    }
+#rd_valores {
+    display: none;
+    }
+#rd_clinica {
+    display: none;
+    }
+#rd_profissional {
+    display: none;
+    }
+#rd_contato {
+    display: none;
+}
+    
+    #rd_valores:checked ~ .sections {
+      margin-top: -100vh;
+    }
+    
+    #rd_clinica:checked ~ .sections {
+      margin-top: -200vh;
+    }
+    #rd_profissional:checked ~ .sections {
+        margin-top: -300vh;
+      }
+      #rd_contato:checked ~ .sections {
+        margin-top: -400vh;
+      }
+  
+  .bloco {
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background-image: url(img/branco-mesmo-pranchas-com-manchas-cinzentas.jpg);
+  }
+
+
+  /*SERVIÇOS*/
+  .container {
+    width: 1000px;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    background: none;
+  }
+  .container .card {
+    position: relative;
+    cursor: pointer;
+    background: none;
+  }
+  .container .card .face {
+    width: 350px;
+    height: 250px;
+    transition: 0.5s;
+    border-radius: 5px;
+  }
+  .container .card .face.face1 {
+    position: relative;
+    background-size: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transform: translateY(100px);
+  }
+  .container .card:hover .face.face1 {
+    transform: translateY(0);
+  }
+  .container .card:hover .face.face1 .content {
+    opacity: 1;
+  }
+  .container .card .face.face1 .content img {
+    width: 350px;
+    height: 220px;
+    border-radius: 5px;
+  }
+  .container .card .face.face1 .content h3 {
+    margin: 10px 0 0;
+    background: transparent;
+    width: 0;
+    color: #008A5B;
+    font-size: 1.5em;
+  }
+  .container .card .face.face2{
+    position: relative;
+    background:rgba(217, 213, 217, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+    transform: translateY(-100px);
+  }
+  .container .card:hover .face.face2 {
+    transform: translateY(0);
+  }
+  .container .card .face.face2 .content p{
+    color: #008A5B;
+  }
+
+  /*VALORES*/
+  .container-valor{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+  }
+  .border{
+    height: 369px;
+    width: 290px;
+    background: transparent;
+    border-radius: 10px;
+    transition: border 1s;
+    position: relative;
+  }
+  .border:hover{
+    border: 1px solid #008A5B;
+  }
+  .card-valor{
+    height: 379px;
+    width: 300px;
+    background: #808080;
+    border-radius: 10px;
+    transition: background 0.8s;
+    overflow: hidden;
+    background: #000;
+    box-shadow: 0 70px 63px -60px #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+  }
+  /*cera*/
+  .card0{
+    background: url(img/ceraquente.jpg) center center no-repeat;
+    background-size: 300px;
+  }
+  .card0:hover{
+    background: url(img/ceraquente.jpg) left center no-repeat;
+    background-size: 600px;
+  }
+  .card0:hover h2{
+    opacity: 1;
+  }
+  .card0:hover .g1{
+    opacity: 1;
+  }
+  /*apara*/
+  .card1{
+    background: url(img/razor-gc825aeabe_640.jpg) center center no-repeat;
+    background-size: 600px;
+  }
+  .card1:hover{
+    background: url(img/razor-gc825aeabe_640.jpg) left center no-repeat;
+    background-size: 600px;
+  }
+  .card1:hover h2{
+    opacity: 1;
+  }
+  .card1:hover .g{
+    opacity: 1;
+  }
+  /*esfoliação*/
+  .card2{
+    background: url(img/esfoliantecreme.jpg) center center no-repeat;
+    background-size: 300px;
+  }
+  .card2:hover{
+    background: url(img/esfoliantecreme.jpg) left center no-repeat;
+    background-size: 600px;
+  }
+  .card2:hover h2{
+    opacity: 1;
+  }
+  .card2:hover .g{
+    opacity: 1;
+  }
+  h2{
+    color: #008A5B;
+    text-shadow: #008A5B 0.1em 0.1em 0.2em;
+    margin-left: 10px;
+    font-weight: 300;
+    transition: opacity 1s;
+  }
+  .g{
+    opacity: 0;
+    transition: opacity 1s;
+    color: #008A5B;
+    font-weight: 600;
+  }
+  .g1{
+    opacity: 0;
+    transition: opacity 1s;
+    color: #008A5B;
+    font-weight: 600;
+    font-size: small;
+  }
+  .texto-valor{
+    position: absolute;
+    margin-left: 10px;
+    height: 130px;
+    top: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+  }
+
+
+
+
+  
+  /*A CLÍNICA*/
+  .clinica-kl {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.07);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3.7px);
+    -webkit-backdrop-filter: blur(3.7px);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    margin-right: 50px;
+    margin-left: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.clinica-kl1 {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.clinica-kl1 img {
+  width: 300px;
+  height: 300px;
+  margin-right: 75px;
+  border-radius: 15%;
+}
+
+.clinica-kl1 p {
+  text-align: justify;
+  margin-left: 50px;
+  margin-right: 10px;
+}
+
+.clinica-kl2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-right: 100px;
+}
+
+.clinica-kl2 p {
+  text-align: justify;
+}
+.clinica-kl2 h3 {
+  color: white;
+  background-color: #008A5B;
+  font-size: medium;
+  padding: 5px;
+  border-radius: 5px;
+}
+  /*O PROFISSIONAL*/
+
+  .profissional-kl {
+    margin-right: 100px;
+    margin-left: 100px;
+    padding: 30px;
+    padding-top: 300px;
+    text-align: justify;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.07);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3.7px);
+    -webkit-backdrop-filter: blur(3.7px);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    background-image: url(img/profissional.png);
+    background-position: center 0;
+    background-size: cover;
+  }
+
+  .profissional-kl p {
+    background: none;
+  }
+
+  /*FALE CONOSCO*/
+.box{
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 032);
+backdrop-filter: blur(3.1px);
+-webkit-backdrop-filter: blur(3.1px);
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-items: center;
+justify-content: center;
+padding: 10px;
+border-radius: 15px;
+color: #008A5B;
+font-weight: bold;
+margin-left: -45%;
+margin-right: 12%;
+margin-top: 5%;
+}
+fieldset {
+border: none;
+
+}
+.inputBox {
+position: relative;
+}
+
+.inputUser {
+background: none;
+border: none;
+border-bottom: 1px solid #008A5B;
+outline: none;
+font-size: 16px;
+width: 100%;
+letter-spacing: 2px;
+color: #008a00;
+}
+.inputUserbox {
+outline: none;
+color: #008a00;
+font-size: 15px;
+width: 100%;
+letter-spacing: 2px;
+}
+
+.labelInput {
+position: absolute;
+top: 0px;
+left: 0px;
+pointer-events: none;
+transition: .5;
+}
+.inputUser:focus ~ .labelInput,
+.inputUser:valid ~ .labelInput {
+  top: -20px;
+  font-size: 12px;
+  color: #008A5B;
+  font-weight: bold;
+}
+#submit{
+background-image: linear-gradient(to right, rgb(0, 138, 91)  , rgb(0, 161, 94));
+width: 100%;
+border: none;
+padding: 15px;
+color: white;
+font-size: 15px;
+cursor: pointer;
+border-radius: 10px;
+}
+#submit:hover{
+background-image: linear-gradient(to right,rgb(0, 138, 1), rgb(0, 138, 0));
+}
+
+.faleconosco {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+/*RODAPE*/
+.rodapedetalhes {
+  font-size: medium;
+  color: white;
+  background-color: #008A5B;
+  padding: 5px;
+  width: 70px;
+  border-radius: 5px;
+  font-variant-caps: all-petite-caps;
+}
+.rodapedetalhes-1 {
+  font-size: medium;
+  color: white;
+  background-color: #008A5B;
+  padding: 5px;
+  width: 50px;
+  border-radius: 5px;
+  font-variant-caps: all-petite-caps;
+}
+
+.rodapedetalhes1 {
+  text-decoration: none;
+  font-weight: bolder;
+}
+.redelink1 {
+  text-decoration-line: none;
+  font-size:larger;
+  font-weight: bolder;
+}
+
+ 
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
